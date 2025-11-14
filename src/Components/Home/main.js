@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './main.css';
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -32,9 +32,9 @@ function Section({ title, items, moreLink, moreText }) {
         ))}
       </div>
       <div className="main-more">
-        <a href={moreLink} className="main-more-link">
+        <Link to={moreLink} className="main-more-link">
           {moreText} &gt;&gt;
-        </a>
+        </Link>
       </div>
     </section>
   );
