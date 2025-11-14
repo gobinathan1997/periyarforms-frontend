@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+const API_URL = process.env.REACT_APP_API_URL;
 import { useParams } from "react-router-dom";
 import "./PostDetails.css";
 import Navbar from '../Home/Navbar';
@@ -8,7 +9,7 @@ function PostDetails() {
   const [post, setPost] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/posts/${id}`)
+    fetch(`${API_URL}/posts/${id}`)
       .then((res) => res.json())
       .then((data) => setPost(data))
       .catch((err) => console.error("Error fetching post:", err));

@@ -2,6 +2,7 @@
 
 
 import React, { useEffect, useState } from "react";
+const API_URL = process.env.REACT_APP_API_URL;
 import Navbar from '../Home/Navbar';
 import Footer from '../../Components/Home/Footer';
 import "../../Components/Home/main.css";
@@ -12,7 +13,7 @@ function CurrentAffairs() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/posts?category=Current Affairs")
+    fetch(`${API_URL}/posts?category=${encodeURIComponent('Current Affairs')}`)
       .then((res) => res.json())
       .then((data) => setPosts(data))
       .catch((err) => console.error("Error fetching posts:", err));

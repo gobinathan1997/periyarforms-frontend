@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+const API_URL = process.env.REACT_APP_API_URL;
 import './main.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -48,7 +49,7 @@ function MainContent() {
   ];
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/posts')
+    fetch(`${API_URL}/posts`)
       .then((res) => res.json())
       .then((data) => setPosts(data))
       .catch((err) => console.error('Error fetching posts:', err));

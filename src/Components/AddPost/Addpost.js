@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import axios from "axios";
+const API_URL = process.env.REACT_APP_API_URL;
 import Navbar from '../Home/Navbar';
 import './AddPost.css';
 
@@ -28,7 +29,7 @@ function AddPost() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/api/posts/", formData);
+      const res = await axios.post(`${API_URL}/posts/`, formData);
       alert("✅ Post created successfully!");
       console.log(res.data);
       setFormData({
