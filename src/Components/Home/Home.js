@@ -1,9 +1,9 @@
-import Footer from './Footer';
-import './Home.css';
-
+import { useEffect } from 'react';
 import Navbar from './Navbar';
+import Footer from './Footer';
 import HomePage from './carousal';
 import MainContent from './main';
+import './Home.css';
 
 function Home() {
 
