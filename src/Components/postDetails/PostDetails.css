@@ -1,0 +1,124 @@
+/* Overall Layout (Content + Sidebar) */
+.post-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* 75% / 25% */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: #fdfdfd;
+}
+
+/* Main Blog Section */
+.post-main {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Georgia', serif;
+  line-height: 1.8;
+  color: #333;
+}
+
+.post-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.post-meta {
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  color: #666;
+}
+
+.post-image {
+  width: 70%;
+  height: 250px;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  object-fit: contain;
+}
+
+.post-description {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.post-content {
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+}
+
+.post-content p {
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+.post-content p::first-letter {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000101;
+}
+
+/* About Author Box */
+.about-author {
+  padding: 1rem;
+  background-color: #f8f8f8;
+  border-left: 4px solid #0b1a2b;
+  border-radius: 8px;
+}
+
+.about-author h3 {
+  margin-top: 0;
+}
+
+/* Sidebar Section */
+.post-sidebar {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+}
+
+.post-sidebar h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #222;
+  text-align: center;
+}
+
+.post-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.post-sidebar li {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.post-sidebar a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+}
+
+.post-sidebar a:hover {
+  color: #0056b3;
+}
+
+/* Responsive Layout for Mobile */
+@media (max-width: 900px) {
+  .post-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .post-sidebar {
+    margin-top: 2rem;
+  }
+}
