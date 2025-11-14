@@ -1,10 +1,9 @@
-
-
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
-const API_URL = process.env.REACT_APP_API_URL;
 import Navbar from '../Home/Navbar';
 import './AddPost.css';
+
+const API_URL = process.env.REACT_APP_API_URL;
 
 
 function AddPost() {

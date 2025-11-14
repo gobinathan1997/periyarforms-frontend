@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-const API_URL = process.env.REACT_APP_API_URL;
 import { useParams } from "react-router-dom";
-import "./PostDetails.css";
 import Navbar from '../Home/Navbar';
+import "./PostDetails.css";
+
+const API_URL = process.env.REACT_APP_API_URL;
 
 function PostDetails() {
   const { id } = useParams();

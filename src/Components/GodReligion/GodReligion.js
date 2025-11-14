@@ -1,12 +1,10 @@
-
-
-
 import React, { useEffect, useState } from "react";
-const API_URL = process.env.REACT_APP_API_URL;
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../Home/Navbar';
 import Footer from '../../Components/Home/Footer';
 import "../../Components/Home/main.css";
-import { useNavigate } from 'react-router-dom';
+
+const API_URL = process.env.REACT_APP_API_URL;
 
 function GodReligion() {
   const [posts, setPosts] = useState([]);
@@ -17,7 +15,6 @@ function GodReligion() {
       .then((res) => res.json())
       .then((data) => setPosts(data))
       .catch((err) => console.error("Error fetching posts:", err));
-      localStorage.clear();
   }, []);
 
   return (

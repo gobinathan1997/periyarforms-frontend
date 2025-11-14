@@ -3,8 +3,6 @@ import Navbar from "../Home/Navbar";
 import "./About.css";
 
 function About() {
-
-  localStorage.clear();
   return (
     <>
       <Navbar />

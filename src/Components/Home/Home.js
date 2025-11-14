@@ -7,6 +7,10 @@ import MainContent from './main';
 
 function Home() {
 
+  useEffect(() => {
+  localStorage.clear();
+}, []);
+
   return (
     <>
       <div className="home-container">

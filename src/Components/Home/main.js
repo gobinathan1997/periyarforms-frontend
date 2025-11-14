@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-const API_URL = process.env.REACT_APP_API_URL;
-import './main.css';
 import { useNavigate } from 'react-router-dom';
+import './main.css';
+
+const API_URL = process.env.REACT_APP_API_URL;
 
 // Reusable Section Component
 function Section({ title, items, moreLink, moreText }) {
